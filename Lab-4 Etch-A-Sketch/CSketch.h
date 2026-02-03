@@ -17,6 +17,12 @@ class CSketch : public CBase4618
 private:
 
     bool _exit; ///< Indicates if exit was requested.
+    cv::Point _cursor; ///< Current cursor position
+    cv::Point _prevCursor; ///< Previous cursor position
+    cv::Size  _size; ///< Canvas size
+
+    enum DrawColor { GREEN = 0, RED, BLUE }; ///< Enum holds the colors
+    DrawColor _color;   ///< Current drawing color
 
 public:
     /**
@@ -25,7 +31,7 @@ public:
     *
     * @param size Size of OpenCV drawing canvas
     * @param comport Target COM port
-    *
+    *   
     */
     CSketch(cv::Size size, int comport);
 
@@ -33,6 +39,8 @@ public:
     *
     * @brief Destructor for CSketch class.
     *
+    * @return Nothing to return
+    * 
     */
     virtual ~CSketch();
 
@@ -40,13 +48,17 @@ public:
     *
     * @brief Updates application state.
     *
+    * @return Nothing to return
+    * 
     */
     virtual void update() override;
 
     /**
     *
     * @brief Draws graphics and GUI to canvas.
-    *
+    * 
+    * @return Nothing to return
+    * 
     */
     virtual void draw() override;
 
@@ -59,3 +71,4 @@ public:
     */
     virtual bool exit_requested() override;
 };
+   
