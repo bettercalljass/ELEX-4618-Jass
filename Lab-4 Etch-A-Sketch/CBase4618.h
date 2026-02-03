@@ -63,6 +63,8 @@ public:
     *
     * Must be implemented by derived class.
     *
+    * @return Nothing to return
+    * 
     */
     virtual void update() = 0;
 
@@ -72,6 +74,8 @@ public:
     *
     * Must be implemented by derived class.
     *
+    * @return Nothing to return
+    * 
     */
     virtual void draw() = 0;
 
@@ -88,6 +92,8 @@ public:
     *
     * @brief Runs update and draw loop.
     *
+    * @return Nothing to return
+    * 
     */
     void run();
-};
+};    
