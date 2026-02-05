@@ -11,6 +11,10 @@
 #define LED_GREEN 38
 #define LED_RED 39
 
+#define ACCELEROMETER_X 4
+#define ACCELEROMETER_Y 5
+#define ACCELEROMETER_Z 6
+
 CSketch::CSketch(cv::Size size, int comport)
 {
     _size = size;
