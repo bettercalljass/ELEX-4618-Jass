@@ -21,6 +21,10 @@ private:
     cv::Point _prevCursor; ///< Previous cursor position
     cv::Size  _size; ///< Canvas size
 
+    float _prevX; ///< Stores previous X-coordinate
+    float _prevY; ///< Stores previous Y-coordinate
+    float _prevZ; ///< Stores previous Z-coordinate
+
     enum DrawColor { GREEN = 0, RED, BLUE }; ///< Enum holds the colors
     DrawColor _color;   ///< Current drawing color
 
