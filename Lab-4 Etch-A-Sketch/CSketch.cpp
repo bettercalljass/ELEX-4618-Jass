@@ -43,6 +43,26 @@ CSketch::~CSketch()
 
 void CSketch::update()
 { 
+    float ax = 0, ay = 0, az = 0;
+
+    board().get_analog(ACCELEROMETER_X, ax);
+    board().get_analog(ACCELEROMETER_Y, ay);
+    board().get_analog(ACCELEROMETER_Z, az);
+
+    float dx = fabs(ax - _prevX);
+    float dy = fabs(ay - _prevY);
+    float dz = fabs(az - _prevZ);
+
+    _prevX = ax;
+    _prevY = ay;
+    _prevZ = az;
+
+    if ((dx + dy + dz) > 0.8f)
+    {
+        canvas() = cv::Mat::zeros(_size, CV_8UC3);
+        Sleep(300);
+    }
+    
     bool colorPressed = false;
     board().get_button(SET_BUTTON, colorPressed);
 
