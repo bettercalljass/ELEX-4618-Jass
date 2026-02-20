@@ -46,10 +46,10 @@ void CBase4618::run()
 
         _dt = elapsed.count();
 
-        if (_dt > 0) 
+        if (_dt > 0)
             _fps = 1.0 / _dt;
 
-        std::cout << "FPS = " << std::fixed 
+        std::cout << "FPS = " << std::fixed
             << std::setprecision(3) << _fps << std::endl;
 
         gpio();
@@ -81,5 +81,7 @@ void CBase4618::run()
 
 bool CBase4618::exit_requested()
 {
+        return false;
+}
     return false;
 }
