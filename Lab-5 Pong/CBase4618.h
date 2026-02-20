@@ -108,8 +108,8 @@ public:
     * @return Delta time in seconds
     *
     */
-    double dt() const { 
-        return _dt; 
+    double dt() const {
+        return _dt;
     }
 
     /**
@@ -119,8 +119,8 @@ public:
     * @return FPS value
     *
     */
-    double fps() const { 
-        return _fps; 
+    double fps() const {
+        return _fps;
     }
 
     /**
