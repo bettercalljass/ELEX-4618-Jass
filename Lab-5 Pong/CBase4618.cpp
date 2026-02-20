@@ -81,7 +81,5 @@ void CBase4618::run()
 
 bool CBase4618::exit_requested()
 {
-        return false;
-}
-    return false;
+     return false;
 }
