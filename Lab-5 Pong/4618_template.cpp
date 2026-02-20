@@ -51,6 +51,7 @@
 
 //Lab 5
 #include "CPong.h"
+// #define DigitalPin 32 using this (defined in lab 3)
 
 // Must include Windows.h after Winsock2.h, so Serial must be included after Client/Server
 #include "Serial.h" 
